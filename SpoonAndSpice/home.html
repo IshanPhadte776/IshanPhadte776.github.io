@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spoon and Spice</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <style>
+      @import url("styles/home.css");
+    </style>
+
+
+  </head>
+  <body>
+
+    <div class="custom-navbar">
+      <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-section">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html#chefs-section">Chefs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html#packages-section">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="appointment.html">Book</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="openPopup()">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+    
+    
+    
+    <section id="hero-section">
+      <div class="hero-image-wrapper">
+
+        <img src="images/heroImage.jpg" class="img-fluid full-width-image" alt="Image Description" />
+
+        <div class="triangle-overlay"></div>
+        <div class="slogan-text">SPOON AND SPICE: MAKES EVERYTHING NICE</div>
+      </div>
+    </section>
+    
+    <section id="popUpSection">
+      <div id="popup" class="popup">
+        <div class="container">
+          <h2>Login</h2>
+          <p>Enter your email and password to register for classes</p>
+          <form>
+            <div class="row">
+              <div class="col-sm-12 mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Email">
+                <input type="password" class="form-control" id="password" placeholder="Password">
+              </div>
+            </div>
+            <button class="close-btn" onclick="closePopup()"></button>
+
+            <div id="errorMessage" style="color: red; display: none;">Incorrect email or password.</div>
+            <div id="successMessage" style="color: green; display: none;">Login Successful</div>
+            <div class="text-center"> <!-- Centered buttons -->
+              <button class = "loginSignUpButton" id="loginButton" onclick="logUserIn()">Login</button>
+              <button class = "loginSignUpButton" onclick="signUserUp()">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+
+    
+    <section id="about-section" class="aboutSection">
+      <h1 class="aboutUsHeader">ABOUT US</h1>
+      <div class="row">
+        <div class="col-1 "></div>
+        <div class="col-5 ">
+          <div class="row">
+            <img src="images/heroChef.png" class="aboutUsImage" alt="Image Description" />
+          </div>
+        </div>
+
+        <div class="col-5  text-center">
+          <h1 class="aboutUsTitle">COOKING CLASSES TO INSPIRE YOU</h1>
+          <p class="aboutUsText">
+            Spoon and Spice, an Ottawa-based company, offers cooking classes for both kids and adults. With expert instructors and hands-on sessions, they cater to different skill levels and interests. Children enjoy interactive classes exploring flavors, while adults delve into specialized workshops. The inviting atmosphere fosters a sense of community, making it a perfect place to nourish culinary dreams.
+          </p>
+          
+        </div>
+        <div class="col-1 "></div>
+      </div>
+    </section>
+
+
+
+
+    <section id="contact-section" class="contactSection">
+
+      <div class="row">
+        <div class="col-1"> </div>
+
+        <div class="col-5">
+          <h1 class="ourInformationHeader">OUR INFORMATION</h1>
+        </div>
+        <div class="col-5">
+          <h1 class="ourLocationHoursHeader">OUR HOURS</h1>
+        </div>
+        <div class="col-1"> </div>
+
+      </div>
+      <div class="row contactImageAndTable">
+        <div class="col-1"> </div>
+
+        <div class="col-5">
+          <a href="https://www.google.com/maps/place/180+York+St,+Ottawa,+ON+K1N+1J6/@45.4297341,-75.6903733,17.81z/data=!4m6!3m5!1s0x4cce05031f301fdd:0x3bdbd275cb6f47a6!8m2!3d45.4297394!4d-75.6886339!16s%2Fg%2F11bw400ww1?entry=ttu" target="_blank">
+            <img src="images/location.png" class="img-fluid w-100 locationImage" alt="Image Description" />
+          </a>
+          </div>
+        <div class="col-1"> </div>
+        <div class="col-3">
+          <table class="table table-bordered table-striped">
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>3:00PM - 7:00PM</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>3:00PM - 7:00PM</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>3:00PM - 7:00PM</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>3:00PM - 7:00PM</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>3:00PM - 5:00PM</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>1:00PM - 5:00PM</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>1:00PM - 3:00PM</td>
+              </tr>
+            </tbody>
+          </table>        </div>
+          <div class="col-1"> </div>
+          <div class="col-1"> </div>
+
+      </div>
+      <div class="row">
+        <div class="col-1"> </div>
+
+        <div class="col-5">
+          <h1 class="ourLocationHoursSubHeading">VISIT OUR LOCATION IN THE HEART OF OTTAWA!</h1>
+        </div>
+        <div class="col-5">
+          <h1 class="ourLocationHoursSubHeading">OPEN TO HELP YOU AT VARIOUS TIMES!</h1>
+        </div>
+        <div class="col-1"> </div>
+
+      </div>
+    </div>
+
+  
+    <section id="footer">
+      <div class="bg-black text-white">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-3">
+              <!-- Column content goes here -->
+              <h1>READY FOR YOUR <a href="https://www.facebook.com/" class="next">NEXT</a> LESSON?</h1>
+            </div>
+            <div class="col-3">
+              <!-- Column content goes here -->
+              <h1 class="footerText">Contact Us</h1>
+              <h4 class="footerText">
+                <a class="footerRedirection" href="https://www.google.com/maps/place/180+York+St,+Ottawa,+ON+K1N+1J6/@45.4297341,-75.6903733,17.81z/data=!4m6!3m5!1s0x4cce05031f301fdd:0x3bdbd275cb6f47a6!8m2!3d45.4297394!4d-75.6886339!16s%2Fg%2F11bw400ww1?entry=ttu" target="_blank">180 Fake Street</a>
+              </h4>
+              <h4  class="footerText" >905-123-4567</h4>
+              <h4 class="footerText" onclick="sendEmail()">SandS@gmail.com</h4>
+            </div>
+            <div class="col-3">
+              <h2 class="footerText" >Sections</h2>
+              <a class="footerRedirection" href="#">Home</a>
+              <a class="footerRedirection" href="services.html#chef-section">Chefs</a>
+              <a class="footerRedirection" href="services.html#packages-section">Packages</a>
+              <a class="footerRedirection" href="appointment.html">Book</a>
+              <a class="footerRedirection" href="#contact-section">Contact</a>
+
+            </div>
+            <div class="col-1">
+              <div class="social-icons">
+
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://twitter.com/" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+
+            </div>
+
+              <div class="fill-space"></div>
+              <p class="footerTextSmall">Privacy Policy</p>
+              <p  class="footerTextSmall">Terms & Conditions</p>
+            </div>
+
+            <div class="col-2"></div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  var loginButton = document.getElementById("loginButton");
+  loginButton.addEventListener("click", openPopup);
+
+  var cols = document.querySelectorAll('.col');
+  var header = document.querySelector('.header');
+  var hideClass = 'hide-navbar';
+  var isNavbarVisible = true; // Add a variable to track navbar visibility
+
+  function toggleNavbarVisibility() {
+    // Check if columns are wrapping
+    var isWrapping = false;
+    for (var i = 0; i < cols.length; i++) {
+      if (cols[i].offsetTop > 0) {
+        isWrapping = true;
+        break;
+      }
+    }
+
+    // Toggle navbar visibility based on wrapping condition
+    if (isWrapping && isNavbarVisible) {
+      header.style.display = 'none';
+      isNavbarVisible = false;
+    } else if (!isWrapping && !isNavbarVisible) {
+      header.style.display = 'block';
+      isNavbarVisible = true;
+    }
+  }
+
+  // Toggle navbar visibility on page load
+  toggleNavbarVisibility();
+
+  // Toggle navbar visibility on window resize
+  window.addEventListener('resize', toggleNavbarVisibility);
+});
+
+document.addEventListener("click", function(event) {
+  console.log("Clicked element:", event.target);
+});
+
+    
+      function openPopup() {
+        var popup = document.getElementById('popup');
+        popup.style.display = 'flex';
+      }
+    
+      function closePopup() {
+        var popup = document.getElementById('popup');
+        popup.style.display = 'none';
+      }
+    
+      function logUserIn() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+    
+        // Perform validation and authentication
+        if (email === "example@example.com" && password === "password123") {
+          // User login is successful, perform desired actions
+          // ...
+    
+          document.getElementById("successMessage").style.display = "block";
+          // Clear the form inputs
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+        } else {
+          // Show error message
+          document.getElementById("errorMessage").style.display = "block";
+        }
+      }
+    
+      function signUserUp() {
+        // Sign up logic goes here
+      }
+
+      function makePhoneCall() {
+        window.location.href = 'tel:+1234567890';
+      }
+
+      function openPopup() {
+      var popup = document.getElementById('popup');
+      popup.style.display = 'flex';
+    }
+
+      function closePopup() {
+        var popup = document.getElementById('popup');
+        popup.style.display = 'none';
+        console.log("Popup closed");
+      }
+
+
+    </script>
+    
+    
+  </body>
+</html>

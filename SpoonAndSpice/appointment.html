@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spoon and Spice</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/appointment.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <div class="custom-navbar">
+      <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-section">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html#chefs-section">Chefs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html#packages-section">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="appointment.html">Book</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="openPopup()">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="hero-image-wrapper">
+
+      <img src="images/appointmentHero.webp" class="img-fluid full-width-image" alt="Image Description" />
+
+      <div class="triangle-overlay"></div>
+      <div class="slogan-text">BOOK CLASSES</div>
+    </div>
+
+
+    <section id="book-section">
+
+    
+<div class="container d-flex align-items-center info ">
+  <div class="row">
+    
+    <div class="col-4">
+      <div class="curved-box">
+        <div class="circle">1</div>
+        Select a Class    &#8594;
+
+      </div>
+
+      <div class="curved-box">
+        <div class="circle">3</div>
+        Review Options &#8594;
+      </div>
+      </div>
+
+
+    </div>
+
+    <div class="col-4">
+      <div class="curved-box">
+        <div class="circle">2</div>
+        Select a Season &#8601;
+      </div>
+
+
+
+    <div class="curved-box">
+      <div class="circle">4</div>
+      Time to Cook!
+    </div>
+
+  </div>
+
+    
+    <div class="col-4">
+      <div class="table-container">
+        <table class="season-converted">
+          <tr>
+            <td>Season</td>
+            <td>Months</td>
+          </tr>
+          <tr>
+            <td>Winter</td>
+            <td>January - April</td>
+          </tr>
+          <tr>
+            <td>Summer</td>
+            <td>May - August</td>
+          </tr>
+          <tr>
+            <td>Fall</td>
+            <td>September - December</td>
+          </tr>
+        </table>
+
+        <p>Note** Classes last 14 weeks</p>
+        <p>Note* The price displayed is the price for 1 entire season</p>
+
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+      
+    </section>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-8">
+          <table>
+            <tr>
+              <td></td>
+              <td class="daysOfTheWeek">Monday</td>
+              <td class="daysOfTheWeek">Tuesday</td>
+              <td class="daysOfTheWeek">Wednesday</td>
+              <td class="daysOfTheWeek">Thursday</td>
+              <td class="daysOfTheWeek">Friday</td>
+              <td class="daysOfTheWeek">Saturday</td>
+              <td class="daysOfTheWeek">Sunday</td>
+            </tr>
+            <tr>
+              <td>1PM - 3PM</td>
+              <td><div class="box">N/A</div></td>
+              <td><div class="box">N/A</div></td>
+              <td><div class="box">N/A</div></td>
+              <td><div class="box">N/A</div></td>
+              <td><div class="box">N/A</div></td>
+              <td><div class="box adult" onclick="setSelectedClass('adult','c')">Once-A-Week Adult(C)</div></td>
+              <td><div class="box kid1" onclick="setSelectedClass('kid','f')">Once-A-Week Kid(F)</div></td>
+            </tr>
+            <tr>
+              <td>3PM - 5PM</td>
+              <td><div class="box kid1" onclick="setSelectedClass('kid','g')">Once-A-Week Kid(G)</div></td>
+              <td><div class="box kid2" onclick="setSelectedClass('kid','b')">Twice-A-Week Kids (B)</div></td>
+              <td><div class="box adult" onclick="setSelectedClass('adult','d')">Once-A-Week Adult(D)</div></td>
+              <td><div class="box kid2" onclick="setSelectedClass('kid','b')">Twice-A-Week Kids (B)</div></td>
+              <td><div class="box kid1" onclick="setSelectedClass('kid','h')">Once-A-Week Kid(H)</div></td>
+              <td><div class="box kid1" onclick="setSelectedClass('kid','i')">Once-A-Week Kid(I)</div></td>
+              <td><div class="box">N/A</div></td>
+            </tr>
+            <tr>
+              <td>5PM - 7PM</td>
+              <td><div class="box kid2" onclick="setSelectedClass('kid','a')">Twice-A-Week Kids (A)</div></td>
+              <td><div class="box kid1" onclick="setSelectedClass('kid','j')">Once-A-Week Kid(J)</div></td>
+              <td><div class="box kid2" onclick="setSelectedClass('kid','a')">Twice-A-Week Kids (A)</div></td>
+              <td><div class="box adult" onclick="setSelectedClass('kid','e')">Once-A-Week Adult(E)</div></td>
+              <td><div class="box">N/A</div></td>
+              <td><div class="box">N/A</div></td>
+              <td><div class="box">N/A</div></td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-1">
+          <div class="dropdown">
+            <h2 class="dropdownMenu">Select Season &#9660;</h2>
+            <div class="dropdown-content">
+              <h2 onclick="setSelectedSeason('Summer 2023')">Summer 2023</h2>
+              <h2 onclick="setSelectedSeason('Fall 2023')">Fall 2023</h2>
+              <h2 onclick="setSelectedSeason('Winter 2024')">Winter 2024</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </section>
+    
+    <section id="output-section"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1 d-flex"> </div>
+
+        <div class="col-md-5 d-flex">
+          <table class="custom-table">
+            <tr>
+              <td>
+                <h2>Name of Chef</h2>
+              </td>
+              <td>
+                <h3 id="chefNameOutput">---</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2>Price:</h2>
+              </td>
+              <td>
+                <h3 id="priceOutput">---</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2>Type of Class</h2>
+              </td>
+              <td>
+                <h3 id="typeOfClassOutput">---</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2>Season:</h2>
+              </td>
+              <td>
+                <h3 id="seasonOutput">---</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2>Weekly Timing</h2>
+              </td>
+              <td>
+                <h3 id="timeOutput">---</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2>Frequency per Week</h2>
+              </td>
+              <td>
+                <h3 id="freqPerWeekOutput">---</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2>Section Letter</h2>
+              </td>
+              <td>
+                <h3 id="sectionLetterOutput">---</h3>
+              </td>
+            </tr>
+          </table>
+                  </div>
+                  <div class="col-md-5 d-flex">
+                    <div class="d-flex flex-column justify-content-between">
+                      <img src="images/adultCooking.jpeg" class="img-fluid w-100 locationImage" alt="Image Description" />
+                      <h3 class="contactEmail">HAVE ANY PROBLEM? CONTACT US AT 905-377-8383 OR SEND US AN EMAIL AT SandS@gmail.com</h3>
+                    </div>
+                  </div>
+
+                <div class="col-md-1 d-flex"> </div>
+      </div>
+    </div>
+    
+
+  </section>
+
+
+    <button class="bookButton" onclick="openPopup()">Confirm Classes</button>
+
+
+    <div id="popup" class="popup">
+      <div class="container">
+        <button class="close-btn" onclick="closePopup()">Close</button>
+
+        <h2>Thanks for Booking!</h2>
+        <p>Here's all the information for your classes</p>
+        <h3 id="emailPopup"></h3>
+        <h3 id="namePopup"></h3>
+        <h3 id="timePopup"></h3>
+        <h3 id="seasonPopup"></h3>
+        <h3 id="pricePopup"></h3>
+        <h3 id="chefNamePopup"></h3>
+        <h3 id="typeOfClassPopup"></h3>
+        <h3 id="sectionLetterPopup"></h3>
+        <h3 id="freqPerWeekPopup"> </h3>
+
+      </div>
+    </div>
+
+    </section>
+
+    <section id="footer" >
+      <div class="bg-black text-white">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-3">
+              <!-- Column content goes here -->
+              <h1>READY FOR YOUR <a href="https://www.facebook.com/" class="next">NEXT</a> LESSON?</h1>
+            </div>
+            <div class="col-3">
+              <!-- Column content goes here -->
+              <h1 class="footerText">Contact Us</h1>
+              <h4 class="footerText">
+                <a class="footerRedirection" href="https://www.google.com/maps/place/180+York+St,+Ottawa,+ON+K1N+1J6/@45.4297341,-75.6903733,17.81z/data=!4m6!3m5!1s0x4cce05031f301fdd:0x3bdbd275cb6f47a6!8m2!3d45.4297394!4d-75.6886339!16s%2Fg%2F11bw400ww1?entry=ttu" target="_blank">180 Fake Street</a>
+              </h4>
+              <h4  class="footerText" onclick="makePhoneCall()" >905-123-4567</h4>
+              <h4 class="footerText">SandS@gmail.com</h4>
+            </div>
+            <div class="col-3">
+              <h2 class="footerText" >Sections</h2>
+              <a class="footerRedirection" href="home.html">Home</a>
+              <a class="footerRedirection" href="services.html">Chefs</a>
+              <a class="footerRedirection" href="services.html#packages-section">Packages</a>
+              <a class="footerRedirection" href="appointment.html">Book</a>
+              <a class="footerRedirection" href="home.html#contact-section">Contact</a>
+
+            </div>
+            <div class="col-1">
+              <div class="social-icons">
+
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://twitter.com/" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+
+            </div>
+
+              <div class="fill-space"></div>
+              <p class="footerTextSmall">Privacy Policy</p>
+              <p  class="footerTextSmall">Terms & Conditions</p>
+            </div>
+
+            <div class="col-2"></div>
+        </div>
+    </section>
+  </body>
+  <script>
+    var email = "example@example.com";
+    var name = "Ishan";
+    var typeOfClass = "";
+    var sectionLetter = "";
+    var chefName = "";
+    var season = "";
+    var price = "";
+    var time = "";
+    var freqPerWeek = "";
+
+    document.addEventListener("DOMContentLoaded", function() {
+    var loginButton = document.getElementById("loginButton");
+    loginButton.addEventListener("click", openPopup);
+  });
+
+    var priceForClasses = {
+      a: 400,
+      b: 400,
+      c: 250,
+      d: 250,
+      e: 250,
+      f: 300,
+      g: 300,
+      h: 300,
+      i: 300,
+      j: 300,
+    };
+
+    var chefForClasses = {
+  a: "Ava Camilla",
+  b: "Ava Camilla",
+  c: "Ava Camilla",
+  d: "Claude Raphael",
+  e: "Claude Raphael",
+  f: "Claude Raphael",
+  g: "Ava Camilla",
+  h: "Ava Camilla",
+  i: "Ava Camilla",
+  j: "Ava Camilla",
+
+};
+
+
+    var timeForClasses = {
+      a: "Monday and Wednesday 5PM- 7PM",
+      b: "Tuesday and Thursday 3PM- 5PM",
+      c: "Saturday 1PM- 3PM",
+      d: "Wednesday 3PM- 5PM",
+      e: "Thursday 5PM- 7PM",
+      f: "Sunday 1PM- 3PM",
+      g: "Monday 3PM- 5PM",
+      h: "Friday 3PM- 5PM",
+      i: "Saturday 3PM- 5PM",
+      j: "Tuesday 5PM-7PM",
+
+    };
+
+    var freqPerWeekForSections = {
+      a: "Twice a Week",
+      b: "Twice a Week",
+      c: "Weekly",
+      d: "Weekly",
+      e: "Weekly",
+      f: "Weekly",
+      g: "Weekly",
+      h: "Weekly",
+      i: "Weekly",
+      j: "Weekly",
+
+    };
+
+    function setSelectedClass(typeOfClassParameter, sectionLetterParameter) {
+      typeOfClass = typeOfClassParameter;
+      sectionLetter = sectionLetterParameter;
+      chefName = chefForClasses[sectionLetter];
+      price = priceForClasses[sectionLetter];
+      time = timeForClasses[sectionLetter];
+
+      freqPerWeek = freqPerWeekForSections[sectionLetter];
+
+      document.getElementById("priceOutput").textContent = "$" + price;
+      document.getElementById("chefNameOutput").textContent = chefName;
+      document.getElementById("typeOfClassOutput").textContent = typeOfClass;
+      document.getElementById("sectionLetterOutput").textContent = sectionLetter;
+
+      document.getElementById("timeOutput").textContent = time;
+      document.getElementById("freqPerWeekOutput").textContent = freqPerWeek;
+      
+    }
+
+    function setSelectedSeason(seasonParameter) {
+        season = seasonParameter
+     document.getElementById("seasonOutput").textContent = season;
+    }
+
+    function openPopup() {
+    //var overlayPopup = document.querySelector('.overlayPopup');
+    var popup = document.getElementById('popup');
+
+
+    document.getElementById("emailPopup").textContent = "Email: " + email;
+    document.getElementById("namePopup").textContent = "Name: " + name;
+
+
+    document.getElementById("timePopup").textContent = "Weekly Timing: " + time;
+    document.getElementById("pricePopup").textContent = "Price: "+price;
+    document.getElementById("typeOfClassPopup").textContent = "Type of Class: " + typeOfClass;
+    document.getElementById("chefNamePopup").textContent = "Chef Name: "+chefName;
+    document.getElementById("freqPerWeekPopup").textContent = "Frequency Per Week: " + freqPerWeek;
+    document.getElementById("sectionLetterPopup").textContent = "Section Letter: " + sectionLetter;
+    document.getElementById("seasonPopup").textContent = "Season: " + season;
+
+    
+    //overlayPopup.classList.add('active');
+    popup.style.display = 'flex';
+    //document.body.classList.add('no-scroll');
+  }
+
+  function closePopup() {
+    //var overlayPopup = document.querySelector('.overlayPopup');
+    var popup = document.getElementById('popup');
+    
+    //overlayPopup.classList.remove('active');
+    popup.style.display = 'none';
+    //document.body.classList.remove('no-scroll');
+  }
+
+  </script>
+
+
+</html>

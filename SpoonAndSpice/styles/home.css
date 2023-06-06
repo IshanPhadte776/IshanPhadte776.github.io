@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+body {
+  overflow-x: hidden;
+  margin-bottom: 0px;
+  font-family: 'Bebas Neue', sans-serif;
+
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+  .navbar-right {
+    margin-left: auto;
+  }
+
+  .full-width-image {
+    width: 100vw;
+    height: 60vw;
+    max-width: 100%;
+    z-index: -1;
+  }
+
+
+  
+
+  .custom-navbar .navbar-toggler {
+    border: 3px solid black;
+    background-color: goldenrod;
+
+  }
+  .custom-navbar .nav-link {
+    padding: 0.25rem 0.5rem; /* Adjust the padding to your desired size */
+    width: 6vw; /* Adjust the width to your desired size */
+  }
+
+  .custom-navbar .navbar-collapse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 20%;
+  }
+  
+  .custom-navbar .navbar-collapse.show {
+    display: block;
+  }
+  
+
+  
+
+
+  .navbar-nav .nav-link {
+    font-size: 1.5vw; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #d0ae00;
+    cursor: pointer;
+    width: 100%;
+
+
+  }
+
+  .navbar-nav li {
+    padding-bottom: 2px;
+  }
+
+  .navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2vw;
+  }
+
+  .navbar-toggler-icon {
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(90deg);
+  }
+
+  .custom-navbar .navbar-toggler[aria-expanded="true"] {
+    background-color: transparent;
+    border: 3px solid black;
+    background-color: goldenrod;
+
+  }
+
+  .custom-navbar .navbar {
+    border: 1px solid transparent;
+    background-color: transparent;
+    transition: border-color 0.3s;
+  }
+
+  .custom-navbar .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 30%;
+  }
+  
+  .custom-navbar .navbar-collapse.show {
+    display: block;
+  }
+  .custom-navbar .nav-link {
+    padding: 0.25rem 0.5rem;
+    width: 6vw;
+    text-shadow: -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 2px 2px 2px black;
+    color: goldenrod;
+  }
+  
+  
+  
+  
+
+  .slogan-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4vw;
+    text-align: center;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    transition: font-size 0.9s ease;
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .slogan-text:hover {
+    font-size: 4.5vw; /* Adjust the font size as desired */
+    background-image: linear-gradient(to bottom right, #ffcc00, #f9f4db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: normal;
+    cursor: pointer;
+  }
+  
+
+  .aboutUsHeader {
+    text-align: center;
+  }
+
+  .aboutSection {
+    padding-top: 20px;
+    background-color: #d9d9d9;
+
+  }
+
+  .aboutUsImage {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+
+  }
+
+  .aboutUsText {
+    text-align: justify;
+    display: inline-block;
+    font-size: 2vw;
+    padding-right: 20px;
+  }
+  
+
+
+
+  .aboutUsTitle {
+    text-align: center;
+    padding-bottom: 2vw;
+    font-size: 2vw;
+  }
+
+  .aboutUsButton {
+    text-align: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+
+  }
+
+  .text-center {
+    align-items: center;
+    padding-top: 2vw;
+  }
+  
+  
+  .contactSection {
+    padding-top: 20px;
+    background-color: #d9d9d9;
+
+  }
+  
+
+  .ourInformationHeader {
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+
+  }
+
+  .ourLocationHoursHeader {
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+
+  }
+
+  .ourLocationHoursSubHeading {
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+
+
+  .contactImageAndTable {
+    display: flex;
+    align-items: center;
+  }
+  .table {
+    border-collapse: collapse;
+  }
+
+
+
+  .table-bordered td, .table-bordered th {
+    border: 4px solid #333333;
+  }
+
+  .table-striped tbody tr:nth-child(odd) {
+    background-color: #d3ae15; /* Light gray */
+  }
+  
+  .table-striped tbody tr:nth-child(even) {
+    background-color: #f9f4db; /* White */
+  }
+  
+
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    width: 500px; /* set a specific width for the pop-up */
+  }
+  .overlayPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+  .popup button {
+    background-color: #ccc;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .popup button:hover {
+    background-color: hsl(50, 80%, 50%);
+  }
+
+  .popup button.close-btn {
+    /* position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px; */
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+
+  
+  .popup button.close-btn::before,
+  .popup button.close-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+
+  }
+  
+  .popup button.close-btn::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .popup button.close-btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+
+  
+  .popup button.close-btn:hover::before {
+    transform: translate(-50%, -50%) rotate(225deg);
+  }
+  
+  .popup button.close-btn:hover::after {
+    transform: translate(-50%, -50%) rotate(-225deg);
+  }
+
+
+.popup button {
+  background-color: #f1e5a2;
+}
+
+    
+
+
+
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .companyNameNavBar{
+    white-space: nowrap ;
+  }
+
+  .header {
+    background-color: #d0ae00;
+
+  }
+
+  .custom-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .navbar-brand-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand-border {
+    border: 2px solid #d0ae00;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  
+  
+
+  .hide-navbar {
+    display: none;
+  }
+  .hero-image-wrapper {
+    position: relative;
+  }
+  
+  .triangle-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+
+
+  #footer {
+    overflow-x: hidden;
+    margin-bottom: 0;
+  }
+
+  .fill-space {
+    flex-grow: 1;
+
+  }
+
+  .footerText {
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  .footerText:hover {
+    color: white;
+  }
+  
+  .footerTextSmall {
+    margin-bottom: 0px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .footerRedirection {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+
+  }
+
+  .footerRedirection:hover {
+    color: goldenrod;
+    font-weight: bold;
+  }
+
+  .col-3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .next {
+    color: goldenrod;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .next::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: goldenrod;
+  }
+  
+  .next:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .next:hover {
+    color: goldenrod;
+    text-decoration: none;
+  }
+  
+  
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a:not(:last-child) {
+  margin-right: 10px; /* Adjust the desired spacing value */
+}
